@@ -11,10 +11,17 @@ public abstract class Employee {
     protected String surname;
     protected int workHours;
 
-    protected abstract double area ();
 
-    public final void showInfo () {
-        System.out.print("\nColor: " + nif + ", Area: " + area());
+    public abstract void showInfo ();
+
+
+    protected final void area (int hours) {
+        workHours += hours;
+    }
+
+    protected final void showEmployeeInfo () {
+        System.out.print("\nNIF: " + nif + ", Apellidos: " + surname + ", Nombre: " + name +
+                ", Horas trabajadas: " + workHours);
     }
 
 }
